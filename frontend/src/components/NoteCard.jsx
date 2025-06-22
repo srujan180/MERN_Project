@@ -29,3 +29,4 @@ const NoteCard = ({ note, handleDelete, formatDate }) => {
 };
 
 export default NoteCard;
+//2
