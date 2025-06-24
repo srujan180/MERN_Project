@@ -9,7 +9,7 @@
     "mernp": "file:..",
     "mongoose": "^8.16.0",
     "nodemon": "^3.1.10",
-    "vite": "^6.3.5",
+    
     "path-to-regexp": "^6.3.0"
   },
   "scripts": {
