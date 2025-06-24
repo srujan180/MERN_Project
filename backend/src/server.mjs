@@ -32,7 +32,7 @@ app.use("/api/notes", notesRoutes);
 
 // Serve frontend in production
 if (process.env.NODE_ENV === "production") {
-  const distPath = path.resolve(__dirname, "../../../frontend/dist");
+  const distPath = path.resolve(__dirname, "../frontend/dist");
 
   app.use(express.static(distPath));
 
