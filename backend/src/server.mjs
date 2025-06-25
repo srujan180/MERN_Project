@@ -30,11 +30,7 @@ const allowedOrigins = [
   process.env.FRONTEND_URL
 ];
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:5001",
-  "https://mern-project-taupe-seven.vercel.app" // ✅ your Vercel frontend URL
-];
+
 
 app.use(cors({
   origin: function (origin, callback) {
