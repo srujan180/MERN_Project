@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === "production")
 
   app.get("*", (req, res) => {
     try {
-      res.sendFile(path.join(distPath, "index.html"));
+      res.sendFile(path.join(distPath, "../../frontend/dist/index.html"));
     } catch (err) {
       console.error("Failed to send index.html:", err.message);
       res.status(500).send("Internal Server Error");
