@@ -30,11 +30,23 @@ const allowedOrigins = [
   process.env.FRONTEND_URL
 ];
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5001",
+  "https://mern-project-taupe-seven.vercel.app" // ✅ your Vercel frontend URL
+];
+
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    // allow requests with no origin (like curl, Postman)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
-
 // Rate Limiting
 app.use(rateLimiter);
 
