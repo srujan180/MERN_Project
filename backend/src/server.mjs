@@ -27,8 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  process.env.FRONTEND_URL
+  "https://mern-project-kv0qikmvc-srujan180s-projects.vercel.app", // exact URL of frontend
+  "https://mern-project-taupe-seven.vercel.app" // (optional) preview/staging if needed
 ];
+
 
 
 
